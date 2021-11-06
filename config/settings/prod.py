@@ -8,7 +8,7 @@ if my_debug == "False":
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['moralis_ecom.herokuapp.com', ]
+ALLOWED_HOSTS = ['moralis-ecom.herokuapp.com', ]
 
 DATABASE_URL = os.getenv('DATABASE_URL')
 

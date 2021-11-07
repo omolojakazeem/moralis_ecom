@@ -130,3 +130,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 misc
+sss
+static/assets/js/product2.js

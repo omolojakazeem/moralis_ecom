@@ -1,5 +1,15 @@
 {% extends "layouts/base.html" %}
 {% block title %} Products {% endblock %}
+{% block auth_link %}
+  <li class="nav-item">
+    <button id="user_login" class="btn btn-primary ">Login</button>
+  </li>
+
+  <li class="nav-item">
+    <button id="user_logout" class="btn btn-danger">Logout</button>
+  </li>
+{% endblock %}
+
 {% block product %}
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
   {% for product in products %}
@@ -11,10 +21,10 @@
         <p class="card-text">{{product.description}}</p>
         <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group">
-            <button type="button" class="btn btn-primary">Buy</button>
+            <button type="button" class="btn btn-primary buy_btn">Buy</button>
             <!--<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
           </div>
-          <small class="text-muted">{{product.price}} eth</small>
+          <span><small class="text-muted price_holder">{{product.price}} </small>eth</span>
         </div>
       </div>
     </div>
@@ -22,3 +32,7 @@
   {% endfor %}
 </div>
 {% endblock product %}
+
+{% block scripts %}
+<script src="/static/assets/js/product.js/"></script>
+{% endblock scripts %}
